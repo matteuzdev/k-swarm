@@ -6,7 +6,7 @@ Valida invariantes matemáticas, estabilidade de limites e velocidade do Sistema
 
 import time
 import pytest
-from core.swarm import (
+from k_swarm import (
     AgentBelief,
     PredictionMarketAMM,
     SocialInteractionItem,

@@ -5,7 +5,7 @@ Valida grafo epistêmico embarcado, travessia BFS, validade temporal e gerador d
 """
 
 import pytest
-from core.swarm import (
+from k_swarm import (
     EpistemicGraph,
     PersonaGenerator,
     PersonaSeed,

@@ -6,7 +6,7 @@ Valida execução E2E do enxame multi-canal, orquestração de rodadas e velocid
 
 import time
 import pytest
-from core.swarm import (
+from k_swarm import (
     SwarmEngine,
     SimulationScenario,
     PersonaGenerator,

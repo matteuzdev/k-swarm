@@ -5,7 +5,7 @@ Valida sintetizador ReACT, geração de relatórios auditáveis e ramificação 
 """
 
 import pytest
-from core.swarm import (
+from k_swarm import (
     SwarmEngine,
     SimulationScenario,
     PersonaGenerator,
