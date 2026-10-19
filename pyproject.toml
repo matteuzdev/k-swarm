@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k-swarm"
+version = "1.0.0"
+description = "Universal Swarm Intelligence & Prediction Market Engine — High-Frequency Social Simulation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Hianto Mateus", email = "hiantomateus@gmail.com" },
+    { name = "Orion (Konig AI Squad)" }
+]
+dependencies = [
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+k-swarm = "cli:main"
+k-swarm-mcp = "k_swarm.mcp_server:main"
