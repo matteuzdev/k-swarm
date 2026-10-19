@@ -13,17 +13,20 @@ import logging
 from typing import Any, Dict, List, Optional
 from pathlib import Path
 
-# Garante path de importação
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
-
-from core.swarm.models import SimulationScenario, CounterfactualEvent
-from core.swarm.graph import EpistemicGraph
-from core.swarm.generator import PersonaGenerator
-from core.swarm.engine import SwarmEngine
-from core.swarm.synthesizer import SwarmSynthesizer
-from core.swarm.fork import TimelineFork
+try:
+    from .models import SimulationScenario, CounterfactualEvent
+    from .graph import EpistemicGraph
+    from .generator import PersonaGenerator
+    from .engine import SwarmEngine
+    from .synthesizer import SwarmSynthesizer
+    from .fork import TimelineFork
+except ImportError:
+    from k_swarm.models import SimulationScenario, CounterfactualEvent
+    from k_swarm.graph import EpistemicGraph
+    from k_swarm.generator import PersonaGenerator
+    from k_swarm.engine import SwarmEngine
+    from k_swarm.synthesizer import SwarmSynthesizer
+    from k_swarm.fork import TimelineFork
 
 # Configuração de log para stderr (nunca poluir stdout que é reservado para JSON-RPC)
 logging.basicConfig(
